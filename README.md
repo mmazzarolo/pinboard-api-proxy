@@ -4,7 +4,8 @@ Tiny proxy server to allow all origins to fetch the Pinboard API.
 
 <br />
 
-For whatever reason the [Pinboard API](https://pinboard.in/howto/#api) doesn't have CORS enabled — so you can't make API calls directly from the browser.
+For whatever reason the [Pinboard API](https://pinboard.in/howto/#api) doesn't have CORS enabled — so you can't make API calls directly from the browser (for context, [here's an old thread on the subject](https://groups.google.com/g/pinboard-dev/c/RtyJC1Gm67E/m/OvkhoWovnRYJ)).
+
 This tiny Vercel serverless function acts as a proxy to the Pinboard API allowing requests from all origins.
 
 Deployed at [pinboard-api-proxy.vercel.app](https://pinboard-api-proxy.vercel.app/).
