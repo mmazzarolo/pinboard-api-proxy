@@ -1,9 +1,11 @@
 # Pinboard API Proxy <img src="./.github/banner.png" width="110" align="left">
 
-For whatever reason the [Pinboard API](https://pinboard.in/howto/#api) doesn't have CORS enabled — so you can't make API calls directly from the browser.
-This tiny Vercel serverless function acts as a proxy to the Pinboard API allowing requests from all origins.
+Tiny proxy server to allow all origins to fetch the Pinboard API. 
 
 <br />
+
+For whatever reason the [Pinboard API](https://pinboard.in/howto/#api) doesn't have CORS enabled — so you can't make API calls directly from the browser.
+This tiny Vercel serverless function acts as a proxy to the Pinboard API allowing requests from all origins.
 
 Deployed at [pinboard-api-proxy.vercel.app](https://pinboard-api-proxy.vercel.app/).
 
