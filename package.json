@@ -13,6 +13,7 @@
     "vercel": "^23.1.2"
   },
   "dependencies": {
-    "http-proxy-middleware": "^2.0.2"
+    "http-proxy-middleware": "^2.0.2",
+    "nextjs-cors": "^2.1.0"
   }
 }
