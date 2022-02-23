@@ -6,8 +6,8 @@
 // Create a proxy to redirect requests of the "/api/*" path to the Pinboard API.
 // Examples:
 // GET /api/v1/posts/all?format=json → https://api.pinboard.in/v1/posts/all?format=json
-const { createProxyMiddleware } = require('http-proxy-middleware');
-const NextCors = require('nextjs-cors');
+import { createProxyMiddleware } from 'http-proxy-middleware';
+import NextCors  from 'nextjs-cors';
 
 const apiProxy = createProxyMiddleware({
   target: "https://api.pinboard.in",
@@ -28,7 +28,7 @@ const apiProxy = createProxyMiddleware({
 // requestes (ignoring sub-paths like "/api/hello"). So, to proxy the entire 
 // path, we add a rewrite in "vercel.json" to allow the "api" directory to catch
 // all "/api/*" requests.
-export default function (req, res) {
+export default async function (req, res) {
   await NextCors(req, res, {
     methods: ['GET', 'HEAD', 'PUT', 'PATCH', 'POST', 'DELETE'],
     origin: '*',
