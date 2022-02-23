@@ -15,7 +15,9 @@ const apiProxy = createProxyMiddleware({
     "^/api": "" // Strip "/api" from the URL 
   },
   onProxyRes(proxyRes) {
-    proxyRes.headers["access-control-allow-origin"] = "*" // Allow CORS
+    proxyRes.headers["access-control-allow-origin"] = "*", 
+    proxyRes.headers["access-control-allow-methods"] = "DELETE, POST, GET, OPTIONS",
+    proxyRes.headers["access-control-allow-headers"] = "Origin, X-Requested-With, Content-Type, Accept" 
   }
 });
 
