@@ -17,7 +17,7 @@ const apiProxy = createProxyMiddleware({
   },
   onProxyRes(proxyRes) {
     proxyRes.headers["access-control-allow-origin"] = "*", 
-    proxyRes.headers["access-control-allow-methods"] = "DELETE, POST, GET, OPTIONS",
+    proxyRes.headers["access-control-allow-methods"] = "DELETE, POST, GET, OPTIONS, PUT, PATCH",
     proxyRes.headers["access-control-allow-headers"] = "Origin, X-Requested-With, Content-Type, Accept" 
   }
 });
